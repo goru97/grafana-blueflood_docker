@@ -9,13 +9,13 @@ docker pull goru97/grafana-blueflood
 # Running:
 
 ### With local Blueflood Setup:
-
-docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=<YOUR_BLUEFLOOD_URL> -e TENANT_ID=<YOUR_TENANT_ID> goru97/grafana-blueflood
-
+```
+docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=<YOUR_BLUEFLOOD_URL> -e TENANT_ID=$YOUR_TENANT_ID goru97/grafana-blueflood
+```
 ### With Rackspace Metrics:
-
-docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=https://global.metrics.api.rackspacecloud.com -e TENANT_ID=<YOUR_TENANT_ID> -e RAX_USERNAME=<YOUR_RACKSPACE_USERNAME> -e RAX_APIKEY=<YOUR_RACKSPACE_APIKEY> goru97/grafana-blueflood
-
+```
+docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=https://global.metrics.api.rackspacecloud.com -e TENANT_ID=$YOUR_TENANT_ID -e RAX_USERNAME=$YOUR_RACKSPACE_USERNAME -e RAX_APIKEY=$YOUR_RACKSPACE_APIKEY goru97/grafana-blueflood
+```
 ## Setting Up Grafana:
 
 * Sign - Up
