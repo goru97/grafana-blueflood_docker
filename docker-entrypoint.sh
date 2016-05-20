@@ -24,8 +24,6 @@ blueflood:
 EOL
 else
 cat > /etc/graphite-api.yaml << EOL
-allowed_origins:
-  - *
 search_index: /dev/null
 finders:
   - blueflood.TenantBluefloodFinder
@@ -52,6 +50,8 @@ exec gunicorn -b 0.0.0.0:8888 --access-logfile /var/log/gunicorn-access.log --er
 
 chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_LOGS"
 chown -R grafana:grafana /etc/grafana
+
+git clone https://github.com/rackerlabs/blueflood-grafana-graphite_api-plugin.git /var/lib/grafana/plugins
 
 exec gosu grafana /usr/sbin/grafana-server  \
   --homepath=/usr/share/grafana             \

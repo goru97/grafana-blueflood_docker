@@ -1,5 +1,5 @@
 # Description:
-Docker Container to run Grafana - 2.6.0 on Blueflood / Rackspace Metrics.
+Docker Container to run Grafana - 3.0.1 on Blueflood / Rackspace Metrics.
 
 # Building / Pulling:
 docker build -t goru97/grafana-blueflood . </BR>
