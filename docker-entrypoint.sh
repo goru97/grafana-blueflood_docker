@@ -10,6 +10,8 @@ apt-get update -y --force-yes
 if [[ -z "$RAX_USERNAME" ]] ||  [[ -z "$RAX_APIKEY" ]]
 then
 cat > /etc/graphite-api.yaml << EOL
+allowed_origins:
+  - *
 search_index: /dev/null
 finders:
   - blueflood.TenantBluefloodFinder
