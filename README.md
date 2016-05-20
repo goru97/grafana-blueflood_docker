@@ -2,19 +2,19 @@
 Docker Container to run Grafana - 2.6.0 on Blueflood / Rackspace Metrics.
 
 # Building / Pulling:
-docker build -t goru97/grafana-blueflood . </BR>
+docker build -t goru97/grafana-blueflood:2.6 . </BR>
 or </BR>
-docker pull goru97/grafana-blueflood
+docker pull goru97/grafana-blueflood:2.6
 
 # Running:
 
 ### With local Blueflood Setup:
 ```
-docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=<YOUR_BLUEFLOOD_URL> -e TENANT_ID=$YOUR_TENANT_ID goru97/grafana-blueflood
+docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=<YOUR_BLUEFLOOD_URL> -e TENANT_ID=$YOUR_TENANT_ID goru97/grafana-blueflood:2.6
 ```
 ### With Rackspace Metrics:
 ```
-docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=https://global.metrics.api.rackspacecloud.com -e TENANT_ID=$YOUR_TENANT_ID -e RAX_USERNAME=$YOUR_RACKSPACE_USERNAME -e RAX_APIKEY=$YOUR_RACKSPACE_APIKEY goru97/grafana-blueflood
+docker run -p 3000:3000 -e BLUEFLOOD_QUERY_URL=https://global.metrics.api.rackspacecloud.com -e TENANT_ID=$YOUR_TENANT_ID -e RAX_USERNAME=$YOUR_RACKSPACE_USERNAME -e RAX_APIKEY=$YOUR_RACKSPACE_APIKEY goru97/grafana-blueflood:2.6
 ```
 ## Setting Up Grafana:
 
